@@ -6,15 +6,13 @@ import { useState } from 'react';
 import { CountdownProvider } from '../contexts/CountdownContext';
 
 function MyApp({ Component, pageProps }) {
-  
+  //Os componentes que ficam aqui são acessíveis em todas as páginas.
   return (
     
     <ChallengesProvider>
-      <CountdownProvider>
       
         <Component {...pageProps} /> {/* Children de ChallengesProvider */}
       
-      </CountdownProvider>
     </ChallengesProvider>
     )
 }

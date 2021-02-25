@@ -73,11 +73,6 @@ export function Countdown(){
             )
             }
 
-            
-
-            
-            
-
         </div>
 
     );
