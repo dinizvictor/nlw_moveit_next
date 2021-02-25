@@ -1,8 +1,14 @@
 //CSS Único para o Componente ExperienceBar (Não afeta outros componentes)
-import styles from '../styles/components/ExperienceBar.module.css'
+import { useContext } from 'react';
+import { ChallengesContext } from '../contexts/ChallengesContext';
+import styles from '../styles/components/ExperienceBar.module.css';
 
 //Componente ExperienceBar
 export function ExperienceBar() {
+
+    const { currentExperience, experienceToNextLevel } = useContext(ChallengesContext);
+
+    const percentToNextLevel = Math.round((currentExperience * 100) / experienceToNextLevel);
 
     return (
 
@@ -10,14 +16,14 @@ export function ExperienceBar() {
             <span>0 xp</span>
             <div>
 
-                <div style={{ width: "50%" }} />
+                <div style={{ width: percentToNextLevel+"%" }} />
 
                 <span className={styles.currentExperience} style={{ left: "50%" }}>
-                    300 xp
+                    {currentExperience} xp
                 </span>
 
             </div>
-            <span>600 xp</span>
+            <span>{experienceToNextLevel} xp</span>
         </header>
 
     );

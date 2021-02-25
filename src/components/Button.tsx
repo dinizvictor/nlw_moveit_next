@@ -1,4 +1,4 @@
-import { useState } from 'react' //Hook do React (Funcionalidade que lida com infos dinâmicas ao longo do tempo)
+import { useState } from 'react'; //Hook do React (Funcionalidade que lida com infos dinâmicas ao longo do tempo)
 
 interface ButtonProps {
 
