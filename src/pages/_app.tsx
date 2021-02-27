@@ -9,12 +9,9 @@ function MyApp({ Component, pageProps }) {
   //Os componentes que ficam aqui são acessíveis em todas as páginas.
   return (
     
-    <ChallengesProvider>
+      <Component {...pageProps} /> 
       
-        <Component {...pageProps} /> {/* Children de ChallengesProvider */}
-      
-    </ChallengesProvider>
-    )
+    );
 }
 
 export default MyApp
